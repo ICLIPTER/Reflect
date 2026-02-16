@@ -46,7 +46,7 @@ const MoodAnalytics = () => {
 
   useEffect(() => {
     fetchAnalytics(period);
-  }, [period]);
+  }, [fetchAnalytics, period]);
 
   if (loading || !analytics?.data || !isLoaded) {
     return <MoodAnalyticsSkeleton />;
